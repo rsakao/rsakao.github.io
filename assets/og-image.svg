@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fff"/>
+  <rect width="1200" height="18" fill="#0017c1"/>
+  <rect x="78" y="72" width="64" height="64" rx="10" fill="#0017c1"/>
+  <text x="110" y="115" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="25" fill="#fff">R</text>
+  <path d="M78 180h1044M78 518h1044" stroke="#d8d8d8"/>
+  <text x="78" y="295" font-family="Arial,sans-serif" font-size="92" font-weight="700" fill="#1a1a1a">AI Product</text>
+  <text x="78" y="400" font-family="Arial,sans-serif" font-size="104" font-weight="700" fill="#0017c1">Builder</text>
+  <text x="82" y="475" font-family="Arial,sans-serif" font-size="25" font-weight="600" fill="#333">AIを活用して、一人でもアイデアを形にできる世界を広げる</text>
+  <rect x="1040" y="82" width="82" height="82" fill="#e8f1fe"/>
+  <path d="m1067 123 14 14 25-30" fill="none" stroke="#0017c1" stroke-width="8"/>
+</svg>

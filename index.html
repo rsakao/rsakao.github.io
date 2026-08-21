@@ -1,31 +1,148 @@
 <!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Reiji Sakaoが開発するアプリの公式サイト">
-  <title>Reiji Sakao Apps</title>
-  <style>
-    :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
-    body { margin: 0; padding: 48px 24px; background: #f5f5f7; color: #1d1d1f; }
-    main { max-width: 680px; margin: 0 auto; }
-    .card { padding: 28px; border-radius: 22px; background: white; box-shadow: 0 12px 36px rgba(0,0,0,.06); }
-    h1 { margin-top: 0; font-size: 32px; }
-    a { color: #5b55f7; }
-    @media (prefers-color-scheme: dark) {
-      body { background: #111; color: #f5f5f7; }
-      .card { background: #1c1c1e; }
-    }
-  </style>
-</head>
-<body>
-  <main>
-    <section class="card">
-      <h1>Reiji Sakao Apps</h1>
-      <p>iPhone向けアプリを開発しています。</p>
-      <p><a href="https://rsakao.github.io/tripconvert-support/">TripConvert サポート</a></p>
-      <p><a href="mailto:roji.development@gmail.com">お問い合わせ</a></p>
-    </section>
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Reiji Sakaoの個人開発ポートフォリオ。育児の合間にAIとつくり、実際に公開・運用しているアプリやツールを紹介します。" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:title" content="Reiji Sakao | AI Product Builder" />
+    <meta property="og:description" content="AIを活用して、一人でもアイデアを形にできる世界を広げる。" />
+    <meta property="og:image" content="assets/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Reiji Sakao | AI Product Builder</title>
+    <link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Sans+Mono:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="site.config.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">本文へ移動</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="ページ先頭へ">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span data-site-name>REIJI SAKAO / PORTFOLIO</span>
+      </a>
+      <nav class="desktop-nav" aria-label="メインナビゲーション">
+        <a href="#projects">つくったもの</a>
+        <a href="#about">プロフィール</a>
+        <a href="#focus">制作の考え方</a>
+      </nav>
+      <a class="header-cta" href="https://note.com/roji_dev/n/n71648cb0bbd9" target="_blank" rel="noreferrer">note <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span data-availability>育児の合間に、AIと個人開発を続けています</span></p>
+          <h1 id="hero-title">
+            <span>AI Product</span>
+            <span class="accent-line">Builder<span class="title-dot">.</span></span>
+          </h1>
+          <p class="hero-mission" data-mission>AIを活用して、一人でもアイデアを形にできる世界を広げる</p>
+          <p class="hero-description" data-hero-description></p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">つくったものを見る <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="https://note.com/roji_dev/n/n71648cb0bbd9" target="_blank" rel="noreferrer">制作記録を読む <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="アイデアからプロダクトまでの流れ">
+          <div class="orbit orbit-one" aria-hidden="true"></div>
+          <div class="orbit orbit-two" aria-hidden="true"></div>
+          <div class="visual-card card-idea">
+            <span class="visual-number">01</span>
+            <strong>Idea</strong>
+            <small>課題を見つける</small>
+          </div>
+          <div class="visual-card card-ai">
+            <span class="spark" aria-hidden="true">✦</span>
+            <strong>AI</strong>
+            <small>可能性を加速する</small>
+          </div>
+          <div class="visual-card card-product">
+            <span class="visual-number">03</span>
+            <strong>Product</strong>
+            <small>使える形にする</small>
+          </div>
+          <svg class="flow-line" viewBox="0 0 560 520" aria-hidden="true">
+            <path d="M118 112 C 270 40, 382 112, 390 212 S 284 380, 430 430" />
+          </svg>
+          <div class="visual-caption" aria-hidden="true">
+            <span>課題を整理</span><span>小さく試作</span><span>使える形へ</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="marquee capability-band" aria-label="対応領域">
+        <div class="marquee-track">
+          <span>AI × 個人開発</span><i aria-hidden="true">/</i><span>AI × 生産性・自動化</span><i aria-hidden="true">/</i><span>作って公開する過程</span>
+        </div>
+      </div>
+
+      <section class="section projects-section" id="projects" aria-labelledby="projects-title">
+        <div class="section-label reveal"><span>01</span> Products & Projects</div>
+        <div class="section-intro reveal">
+          <div>
+            <p class="kicker">SHIPPED & IN USE</p>
+            <h2 id="projects-title">まず、つくったものを<br />見てください。</h2>
+          </div>
+          <p>2026年8月の制作記録で「目的を満たして使える完成品」と整理した5つを掲載しています。AI StatusのWeb版とMac版は、1つのカードにまとめました。</p>
+        </div>
+        <div class="project-list" data-projects></div>
+      </section>
+
+      <section class="section about" id="about" aria-labelledby="about-title">
+        <div class="section-label reveal"><span>02</span> About</div>
+        <div class="about-grid">
+          <div class="section-heading reveal">
+            <p class="kicker">WHO I AM</p>
+            <h2 id="about-title">技術とアイデアの間を、<br />つなぐ人。</h2>
+          </div>
+          <div class="about-content reveal">
+            <div data-bio></div>
+            <dl class="profile-facts" data-profile-facts></dl>
+          </div>
+        </div>
+
+        <div class="stack-block reveal">
+          <p class="kicker">TECH STACK / CAPABILITIES</p>
+          <div class="stack-list" data-stack></div>
+        </div>
+      </section>
+
+      <section class="section achievements" id="focus" aria-labelledby="focus-title">
+        <div class="section-label reveal"><span>03</span> How I Build</div>
+        <div class="achievements-grid">
+          <div class="section-heading reveal">
+            <p class="kicker">PRODUCT JUDGMENT</p>
+            <h2 id="focus-title">小さく形にして、<br />使って判断する。</h2>
+          </div>
+          <ol class="achievement-list reveal" data-achievements></ol>
+        </div>
+      </section>
+
+      <section class="journal" id="writing" aria-labelledby="writing-title">
+        <div class="journal-orb" aria-hidden="true"></div>
+        <div class="journal-content reveal">
+          <p class="kicker">BUILD NOTES</p>
+          <h2 id="writing-title">完成品だけでなく、<br /><span>つくる過程も残す。</span></h2>
+          <p>育児中の細切れ時間で何をつくり、どこを自分で判断し、AIに何を任せたのか。公開や審査でつまずいたことも含めて、noteに制作記録をまとめています。</p>
+          <a class="button button-light" href="https://note.com/roji_dev/n/n71648cb0bbd9" target="_blank" rel="noreferrer">noteの記事を読む <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="social-links reveal" data-social-links></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">R</span><span data-site-name>REIJI SAKAO / PORTFOLIO</span></a>
+      <p>© <span data-year></span> <span data-owner>Reiji Sakao</span>. Built with care and curiosity.</p>
+      <a href="#top">ページ上部へ <span aria-hidden="true">↑</span></a>
+    </footer>
+  </body>
 </html>
