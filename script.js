@@ -53,6 +53,9 @@
     number.className = "project-index";
     number.textContent = String(index + 1).padStart(2, "0");
 
+    const header = document.createElement("div");
+    header.className = "project-header";
+
     const titleBlock = document.createElement("div");
     titleBlock.className = "project-title";
     const title = document.createElement("h3");
@@ -60,17 +63,55 @@
     const category = document.createElement("p");
     category.textContent = project.category;
     titleBlock.append(title, category);
+    header.append(number, titleBlock);
 
-    if (project.status) {
-      const status = document.createElement("span");
-      status.className = "project-status";
-      status.textContent = project.status;
-      titleBlock.append(status);
-    }
+    const value = document.createElement("p");
+    value.className = "project-value";
+    value.textContent = project.value;
 
-    const summary = document.createElement("p");
-    summary.className = "project-summary";
-    summary.textContent = project.summary;
+    const createTagList = (items, className) => {
+      const list = document.createElement("ul");
+      list.className = className;
+      (items || []).forEach((item) => {
+        const node = document.createElement("li");
+        node.textContent = item;
+        list.append(node);
+      });
+      return list;
+    };
+
+    const outcomes = createTagList(project.outcomes, "project-outcomes");
+    outcomes.setAttribute("aria-label", "成果");
+
+    const story = document.createElement("dl");
+    story.className = "project-story";
+    [
+      ["Problem", project.problem],
+      ["Solution", project.solution],
+    ].forEach(([label, detail]) => {
+      const group = document.createElement("div");
+      const term = document.createElement("dt");
+      const description = document.createElement("dd");
+      term.textContent = label;
+      description.textContent = detail;
+      group.append(term, description);
+      story.append(group);
+    });
+
+    const meta = document.createElement("div");
+    meta.className = "project-meta";
+    [
+      ["AI", project.aiUsage, "project-tags project-tags-ai"],
+      ["Tech", project.tech, "project-tags"],
+    ].forEach(([label, items, className]) => {
+      const group = document.createElement("div");
+      group.className = "project-meta-group";
+      const heading = document.createElement("p");
+      heading.className = "project-meta-label";
+      heading.textContent = label;
+      group.append(heading, createTagList(items, className));
+      meta.append(group);
+    });
 
     const links = document.createElement("div");
     links.className = "project-links";
@@ -86,7 +127,8 @@
       links.append(link);
     });
 
-    card.append(number, titleBlock, summary, links);
+    card.append(header, value, outcomes, story, meta);
+    if (links.childElementCount) card.append(links);
     projects.append(card);
   });
 
